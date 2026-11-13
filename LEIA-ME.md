@@ -50,3 +50,17 @@ Para implantação multiusuário, o próximo passo é conectar autenticação e 
 - Relatórios aparece no menu.
 - O cache offline busca sempre a versão mais nova quando há conexão, então atualizações chegam sem precisar limpar o navegador.
 - `Iniciar NutriFit.bat` procura `py` ou `python`, avisa se o Python não estiver instalado e abre o navegador só depois que o servidor sobe.
+
+## Novidades da versão 1.2
+
+- **Base TACO embutida** (Tabela Brasileira de Composição de Alimentos, NEPA/Unicamp, 4ª ed.): 597 alimentos com busca instantânea, mesmo offline, e medidas caseiras do IBGE (POF 2008-2009), como colher de sopa e concha. Produtos de marca continuam vindo do Open Food Facts e do código de barras.
+- **Diário** com quantidade editável direto na lista, alimentos mais usados e aplicação da dieta pré-definida.
+- **Dietas pré-definidas** (Planejamento): várias dietas, uma para cada dia da semana, preenchimento automático do diário, criação a partir de um dia já registrado, adição de vários alimentos de uma vez e lista de compras gerada pela dieta.
+- **Treinos** com exercícios, séries, repetições e carga, mostrando a carga da última vez e permitindo repetir o treino anterior.
+- **Apple Saúde / Apple Watch** por meio de um atalho do iPhone: passos, calorias ativas e minutos de exercício, com média de passos de 7 e 30 dias.
+- **Guia de medidas corporais** com o protocolo de cada circunferência.
+- **IA opcional (Claude, da Anthropic)**: reconhecimento de fotos de refeições e assistente que responde perguntas usando seus registros. Requer uma chave de API própria (pagamento por uso em console.anthropic.com). A chave fica só no aparelho e não entra no backup.
+
+### Fontes e licenças
+- TACO 4ª ed. (NEPA/UNICAMP, 2011): reprodução permitida com citação da fonte. Medidas caseiras: IBGE, POF 2008-2009. Dados extraídos do pacote taco-br-mcp (licença MIT).
+- SDK oficial da Anthropic (`vendor/anthropic-sdk-1.3.0.mjs`), licenças Apache-2.0/MIT (`vendor/anthropic-sdk-LICENSE.txt`).

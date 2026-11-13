@@ -945,3 +945,67 @@ dialog::backdrop {
     grid-template-columns: repeat(4,1fr)
   }
 }
+
+/* ===== NutriFit 1.2 ===== */
+.picker { position: relative }
+.picker-list { position: absolute; z-index: 40; left: 0; right: 0; top: calc(100% + 4px); background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 14px 40px rgba(20,50,35,.14); max-height: 340px; overflow-y: auto; padding: 4px }
+.picker-item { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; width: 100%; padding: 9px 11px; border: 0; background: none; text-align: left; border-radius: 10px; cursor: pointer; font: inherit; color: var(--ink) }
+.picker-item:hover, .picker-item:focus { background: var(--mint); outline: none }
+.picker-item small { color: var(--muted); font-size: 12px }
+.picker-off { color: var(--blueink); font-weight: 600 }
+.picker-status { padding: 9px 11px; font-size: 12.5px; color: var(--muted) }
+.src-tag { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .02em; padding: 1px 7px; border-radius: 99px; background: var(--mint); color: var(--green) }
+.src-tag.off { background: var(--blue); color: var(--blueink) }
+.src-tag.mine { background: var(--orange); color: var(--orangeink) }
+.src-tag.manual { background: var(--rose); color: #a0523f }
+.food-add-row { display: grid; grid-template-columns: 1.3fr .8fr 1.4fr auto; gap: 10px; margin-top: 10px; align-items: end }
+.food-preview { margin-top: 10px; padding: 9px 12px; border-radius: 12px; background: var(--bg); color: var(--ink) }
+details.manual, details.bulk, details.guide { margin-top: 12px }
+details > summary { cursor: pointer; font-weight: 600; color: var(--green); padding: 4px 0 }
+details.guide ol, details.guide ul, .guide-card ul { padding-left: 20px; line-height: 1.55 }
+details.guide code { background: var(--bg); padding: 1px 5px; border-radius: 6px; font-size: 12px; word-break: break-all }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 14px }
+.chip { border: 1px solid var(--line); background: var(--paper); border-radius: 99px; padding: 6px 11px; font: inherit; font-size: 12.5px; cursor: pointer; color: var(--ink) }
+.chip:hover { background: var(--mint); border-color: var(--lime) }
+.meal-block { border-top: 1px solid var(--line); padding: 10px 0 }
+.meal-block:first-of-type { border-top: 0 }
+.meal-block-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap }
+.item-row { display: flex; gap: 10px; align-items: center; padding: 6px 0 }
+.item-row > .meal-info { flex: 1; min-width: 0 }
+.qty-wrap { display: flex; align-items: center; gap: 5px; font-size: 12.5px; color: var(--muted); white-space: nowrap }
+.qty { width: 74px; padding: 7px 8px; border: 1px solid var(--line); border-radius: 10px; font: inherit; text-align: right; background: var(--paper) }
+.qty:focus { outline: 2px solid var(--lime); border-color: var(--green2) }
+.list-row.selected { background: var(--mint); border-radius: 12px; padding-left: 8px; padding-right: 8px }
+.title-input { font: 700 20px Manrope, sans-serif; border: 0; border-bottom: 1px dashed var(--line); background: none; color: var(--ink); width: 100%; padding: 2px 0; margin-bottom: 4px }
+.title-input:focus { outline: none; border-bottom-color: var(--green2) }
+.bulk-preview { margin-top: 12px; display: grid; gap: 8px }
+.bulk-row { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; padding: 8px; border: 1px solid var(--line); border-radius: 12px }
+.bulk-row select { width: 100%; margin: 4px 0; padding: 6px; border-radius: 8px; border: 1px solid var(--line); font: inherit }
+.bulk-row small { display: block }
+.ex-head, .ex-row { display: grid; grid-template-columns: minmax(0, 2.2fr) 62px 62px 78px 34px; gap: 6px; align-items: center }
+.ex-row { margin-top: 6px }
+.ex-row input { width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--paper); min-width: 0 }
+.ex-hint { grid-column: 1 / -1; color: var(--muted); font-size: 11.5px }
+.ex-hint:empty { display: none }
+.ex-list { margin: 6px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--ink) }
+.workout { align-items: flex-start }
+.up { color: #b4532a } .down { color: var(--green2) }
+.bubble { white-space: normal; line-height: 1.5 }
+.bubble.typing { opacity: .6; font-style: italic }
+.photo-card { max-width: 560px }
+.photo-preview { width: 100%; max-height: 260px; object-fit: cover; border-radius: 14px; margin: 6px 0 10px }
+.photo-items { display: grid; gap: 4px }
+.photo-item { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line) }
+#photoDialog { width: min(600px, calc(100vw - 24px)) }
+@media (max-width: 760px) {
+  .food-add-row { grid-template-columns: 1fr 1fr }
+  .food-add-row .field:last-child { grid-column: 1 / -1 }
+  .food-add-row .field:last-child label { display: none }
+  .food-add-row .button { width: 100% }
+  .ex-head, .ex-row { grid-template-columns: minmax(0, 1fr) 46px 50px 58px 30px; gap: 4px }
+  .qty { width: 62px }
+  .item-row { gap: 8px }
+}
+.macro-row.four { grid-template-columns: repeat(4, 1fr); margin-top: 0 }
+@media (max-width: 760px) { .macro-row.four { grid-template-columns: repeat(2, 1fr) } }
+.ex-row input::placeholder, .qty::placeholder, .field input::placeholder { color: #b3bdb7 }

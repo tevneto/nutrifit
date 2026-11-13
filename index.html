@@ -24,7 +24,9 @@
   </div>
   <div id="toast" role="status" class="toast"></div>
   <dialog id="quickDialog"><form method="dialog" class="dialog-card"><div class="dialog-head"><div><span class="eyebrow">REGISTRO RÁPIDO</span><h2>O que deseja registrar?</h2></div><button class="icon-button" value="cancel" aria-label="Fechar">×</button></div><div class="quick-grid"><button value="cancel" data-go="alimentacao">🥗<b>Alimento</b><small>Refeição ou ingrediente</small></button><button value="cancel" data-go="hidratacao">💧<b>Água</b><small>Hidratação de hoje</small></button><button value="cancel" data-go="atividades">🏃<b>Atividade</b><small>Exercício ou passos</small></button><button value="cancel" data-go="evolucao">⚖️<b>Medida corporal</b><small>Peso ou circunferência</small></button></div></form></dialog>
+  <script src="taco.js"></script>
   <script src="app.js"></script>
+  <script type="module" src="ai.js"></script>
   <script>if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(() => {});</script>
 </body>
 </html>

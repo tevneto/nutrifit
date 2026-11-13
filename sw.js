@@ -1,10 +1,12 @@
 // Rede primeiro: sempre busca a versão mais nova dos arquivos e usa o cache só quando estiver offline.
-const CACHE = 'nutrifit-static-v2';
+const CACHE = 'nutrifit-static-v3';
 const FILES = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './taco.js',
+  './ai.js',
   './manifest.webmanifest',
   './icons/nutrifit-192.svg',
   './icons/nutrifit-512.svg'
