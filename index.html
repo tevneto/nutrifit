@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f8f5" />
+  <link rel="icon" href="icons/nutrifit-192.svg" type="image/svg+xml" />
+  <title>NutriFit — Nutrição e movimento</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio" aria-label="NutriFit início"><span class="brand-mark">n</span><span>nutrifit<small>SAÚDE, NO SEU RITMO</small></span></a>
+      <div class="side-label">SEU ESPAÇO</div>
+      <nav id="navigation" aria-label="Navegação principal"></nav>
+      <div class="side-foot"><div class="avatar" id="avatar">N</div><div><b id="userName">Seu perfil</b><small>Dados neste dispositivo</small></div><button class="icon-button" data-go="configuracoes" aria-label="Configurações">⚙</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div><span class="eyebrow" id="todayLabel"></span><h1 id="pageTitle">Início</h1></div><div class="top-actions"><span class="local-pill"><i></i> Sincronizado neste dispositivo</span><button class="button button-primary" data-action="quick-add">＋ <span>Adicionar registro</span></button></div></header>
+      <div id="app" aria-live="polite"></div>
+    </main>
+  </div>
+  <div id="toast" role="status" class="toast"></div>
+  <dialog id="quickDialog"><form method="dialog" class="dialog-card"><div class="dialog-head"><div><span class="eyebrow">REGISTRO RÁPIDO</span><h2>O que deseja registrar?</h2></div><button class="icon-button" value="cancel" aria-label="Fechar">×</button></div><div class="quick-grid"><button value="cancel" data-go="alimentacao">🥗<b>Alimento</b><small>Refeição ou ingrediente</small></button><button value="cancel" data-go="hidratacao">💧<b>Água</b><small>Hidratação de hoje</small></button><button value="cancel" data-go="atividades">🏃<b>Atividade</b><small>Exercício ou passos</small></button><button value="cancel" data-go="evolucao">⚖️<b>Medida corporal</b><small>Peso ou circunferência</small></button></div></form></dialog>
+  <script src="app.js"></script>
+  <script>if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(() => {});</script>
+</body>
+</html>

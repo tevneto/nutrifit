@@ -1,0 +1,22 @@
+{
+  "name": "NutriFit — Nutrição e movimento",
+  "short_name": "NutriFit",
+  "start_url": "./index.html#inicio",
+  "display": "standalone",
+  "background_color": "#f6f8f5",
+  "theme_color": "#f6f8f5",
+  "icons": [
+    {
+      "src": "./icons/nutrifit-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/nutrifit-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
